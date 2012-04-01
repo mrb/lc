@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function lc() {
+  if [ -d $1 ]; then
+    ls -anh $1
+  else
+    if [ -f $1 ]; then
+      cat $1
+    fi
+  fi
+}
+
+lc $1
